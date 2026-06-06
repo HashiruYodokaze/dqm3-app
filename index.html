@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DQM3 Monster Tracker</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-100 text-slate-900 font-sans">
+
+    <!-- Header -->
+    <header class="bg-indigo-600 text-white p-4 sticky top-0 z-10 shadow-md">
+        <h1 class="text-xl font-bold text-center">DQM3 Tracker</h1>
+    </header>
+
+    <!-- Search & Filter -->
+    <div class="p-4 space-y-3">
+        <input type="text" id="searchInput" placeholder="Search monsters..." 
+               class="w-full p-3 rounded-lg border border-slate-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        
+        <div class="flex flex-wrap gap-2">
+            <select id="familyFilter" class="p-2 rounded-lg border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-indigo-500">
+                <option value="">All Families</option>
+            </select>
+            <select id="rankFilter" class="p-2 rounded-lg border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-indigo-500">
+                <option value="">All Ranks</option>
+            </select>
+            <select id="locationFilter" class="p-2 rounded-lg border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-indigo-500">
+                <option value="">All Locations</option>
+            </select>
+            <select id="methodFilter" class="p-2 rounded-lg border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-indigo-500">
+                <option value="">All Methods</option>
+                <option value="scouting">Scouting</option>
+                <option value="synthesis">Synthesis</option>
+                <option value="eggs">Eggs</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Monster List -->
+    <main id="monsterList" class="px-4 pb-24 grid grid-cols-1 gap-2">
+        <!-- Populated by JavaScript -->
+        <div class="text-center py-10 text-slate-500">Loading monsters...</div>
+    </main>
+
+    <!-- Monster Detail Modal -->
+    <div id="detailModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-20 flex items-center justify-center p-4">
+        <div id="modalContainer" class="bg-white w-full max-w-md rounded-2xl shadow-xl max-h-[90vh] overflow-y-auto">
+            <div id="modalContent" class="p-6">
+                <!-- Populated by JavaScript -->
+            </div>
+            <div class="p-4 border-t flex justify-end">
+                <button onclick="closeModal()" class="bg-slate-200 px-4 py-2 rounded-lg font-semibold">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

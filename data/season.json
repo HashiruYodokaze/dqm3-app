@@ -1,0 +1,26 @@
+[
+  {
+    "SeasonId": 3,
+    "Name": "Fall",
+    "Identifier": "fall",
+    "JapaneseName": "秋"
+  },
+  {
+    "SeasonId": 1,
+    "Name": "Spring",
+    "Identifier": "spring",
+    "JapaneseName": "春"
+  },
+  {
+    "SeasonId": 2,
+    "Name": "Summer",
+    "Identifier": "summer",
+    "JapaneseName": "夏"
+  },
+  {
+    "SeasonId": 4,
+    "Name": "Winter",
+    "Identifier": "winter",
+    "JapaneseName": "冬"
+  }
+]

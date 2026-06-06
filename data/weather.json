@@ -1,0 +1,12 @@
+[
+  {
+    "WeatherId": 2,
+    "Name": "Precipitation",
+    "Identifier": "precipitation"
+  },
+  {
+    "WeatherId": 1,
+    "Name": "Sun",
+    "Identifier": "sun"
+  }
+]
